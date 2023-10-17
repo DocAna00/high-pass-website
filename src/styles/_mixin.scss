@@ -1,0 +1,59 @@
+@import '_variables.scss';
+
+@mixin makeContainer {
+  margin: 0 auto;
+  max-width: $containerMaxWidth;
+}
+
+@mixin makeContainer-1024 {
+  margin: 0 auto;
+  max-width: $containerMaxWidth-1024;
+}
+
+@mixin makeContainer-768 {
+  margin: 0 auto;
+  max-width: $containerMaxWidth-768;
+}
+
+@mixin makeContainer-320 {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+}
+
+@mixin darkContainer {
+  background-color: $black;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+@mixin grid-1024 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 30px;
+}
+
+@mixin grid-768 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+}
+
+@mixin grid-320 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@mixin backgroundImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin btn-reset {
+  border: none;
+  background-color: transparent;
+}

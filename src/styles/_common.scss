@@ -1,0 +1,334 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('fonts/Roboto-Bold.woff2') format('woff2'),
+    url('fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Regular'), local('Roboto-Regular'),
+    url('fonts/Roboto-Regular.woff2') format('woff2'),
+    url('fonts/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: local('TT Firs Neue Bold'), local('TTFirsNeue-Bold'),
+    url('fonts/TTFirsNeue-Bold.woff2') format('woff2'),
+    url('fonts/TTFirsNeue-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: local('TT Firs Neue Medium'), local('TTFirsNeue-Medium'),
+    url('fonts/TTFirsNeue-Medium.woff2') format('woff2'),
+    url('fonts/TTFirsNeue-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: local('TT Firs Neue Regular'), local('TTFirsNeue-Regular'),
+    url('fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+    url('fonts/TTFirsNeue-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: $roboto;
+  font-size: 16px;
+  color: $black;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link .social__svg path {
+  transition: fill 0.3s ease;
+}
+
+.social__link:hover .social__svg path {
+  fill: $orange;
+}
+
+.social__link:focus .social__svg path {
+  fill: $brown;
+}
+
+.social__link:focus {
+  outline: none;
+}
+
+.social__link:active:not(:focus) {
+  color: $darkOrange;
+}
+
+.social__link:active .social__svg path {
+  fill: $darkOrange;
+}
+
+.section-heading-bold {
+  font-family: $firsNeue;
+  font-weight: $bold;
+  font-size: 24px;
+}
+
+.section-heading-regular {
+  font-family: $firsNeue;
+  font-weight: $regular;
+  font-size: 24px;
+}
+
+.btn {
+  @include btn-reset();
+  padding: 15px 22px;
+  font-size: 16px;
+  font-weight: $bold;
+  color: $white;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-fill {
+  background-color: $orange;
+  outline: solid 3px transparentize($darkOrange, 1);
+  transition: background-color 0.3s ease;
+}
+
+.btn-fill:hover {
+  background-color: $brown;
+}
+
+.btn-fill:focus-within {
+  outline-color: transparentize($darkOrange, 0);
+}
+
+.btn-fill:active {
+  background-color: $darkOrange;
+}
+
+.btn-outline {
+  padding: 13px 20px;
+  outline: solid 3px $orange;
+  background-color: transparent;
+  width: fit-content;
+  transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: $orange;
+}
+
+.btn-outline:focus {
+  background-color: $brown;
+}
+
+.btn-outline:active {
+  background-color: $darkOrange;
+  outline: solid 3px $darkOrange;
+}
+
+.input {
+  padding: 0;
+  padding: 15px 23px 16px 23px;
+  font-size: 16px;
+  font-family: $roboto;
+  border: none;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.ymaps-2-1-79-controls__toolbar_right,
+.ymaps-2-1-79-controls__toolbar_left,
+.ymaps-2-1-79-controls__bottom,
+.ymaps-2-1-79-copyright__content,
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-controls__control {
+  display: none !important;
+}
+
+input.about__email::placeholder {
+  color: $lightGrey;
+}
+
+input.header__input::placeholder {
+  color: $superLightGrey;
+}
+
+input.contacts__input::placeholder {
+  color: $grey;
+}
+
+textarea.contacts__input::placeholder {
+  color: $grey;
+}
+
+input.input::placeholder {
+  transition: color 0.3s ease;
+}
+
+textarea.input::placeholder {
+  transition: color 0.3s ease;
+}
+
+input.input:hover::placeholder {
+  color: $orange;
+}
+
+textarea:hover::placeholder {
+  color: $orange;
+}
+
+.input:focus {
+  outline: solid 1px $orange;
+}
+
+.just-validate-error-field {
+  outline: solid 1px $pink;
+}
+
+.tag {
+  position: absolute;
+  padding: 6px 14px;
+  font-size: 14px;
+  background-color: $superDarkGrey;
+  color: $white;
+  transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: $orange;
+}
+
+.date {
+  padding-left: 18px;
+  background-size: 14px;
+  background-position: left 0 top 0;
+  background-repeat: no-repeat;
+  font-size: 12px;
+}
+
+.date-grey {
+  background-image: url(../images/calendar-grey.svg);
+  color: $grey;
+}
+
+.date-white {
+  background-image: url(../images/calendar-white.svg);
+  color: $white;
+}
+
+@media (max-width: 750px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .section-heading-bold {
+    font-size: 18px !important;
+  }
+
+  .section-heading-regular {
+    font-size: 18px !important;
+  }
+
+  .btn {
+    padding: 11px 21px;
+    font-size: 14px;
+  }
+
+  .btn-outline {
+    padding: 10px 19px;
+  }
+
+  .master__caption-heading-2 {
+    font-size: 24px !important;
+    line-height: 110%;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 12px 23px 12px 23px;
+    max-width: 450px;
+    font-size: 14px;
+  }
+}

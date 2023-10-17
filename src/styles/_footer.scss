@@ -1,0 +1,122 @@
+@import '_common.scss';
+
+.footer {
+  @include darkContainer();
+  padding: 24px 0 16px 0;
+
+  &__container {
+    @include makeContainer();
+    align-items: center;
+  }
+
+  &__left {
+    margin-right: 177px;
+    min-width: 263px;
+    min-height: 55px;
+    background-image: url(../images/logo-footer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__center {
+    width: 361px;
+  }
+
+  &__text {
+    color: $lightGrey;
+    line-height: 22px;
+  }
+
+  &__author {
+    color: $lightGrey;
+  }
+
+  &__right {
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__caption {
+    margin-bottom: 8px;
+  }
+
+  &__320 {
+    display: none;
+    padding: 14px 0 13px 0;
+    background-color: #4A4A4A;
+  }
+
+  &__logo-320 {
+    margin: 0 auto 0 auto;
+    width: 169px;
+    height: 35px;
+    background-image: url(../images/logo-320.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1330px) {
+
+  .footer {
+
+    &__container {
+      @include makeContainer-1024();
+    }
+
+    &__left {
+      margin-right: 109px;
+      height: 51px;
+      background-image: url(../images/logo-footer-1024.svg);
+    }
+
+    &__caption {
+      margin-bottom: 10px;
+    }
+
+  }
+}
+
+@media (max-width: 1020px) {
+
+  .footer {
+
+    &__container {
+      @include makeContainer-768();
+    }
+
+    &__center {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+
+  .footer {
+    padding: 31px 0 0 0;
+
+    &__container {
+      display: block;
+    }
+
+    &__left {
+      display: none;
+    }
+
+    &__320 {
+      display: block;
+    }
+
+    &__right {
+      margin-bottom: 32px;
+    }
+
+    &__caption {
+      font-size: 16px;
+    }
+
+  }
+
+}
