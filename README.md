@@ -1,5 +1,10 @@
 # high-pass-website
 Сайт фотостудии High pass (учебный проект)
+<div>
+  <img widht="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
+  <img widht="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+  <img widht="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg" />
+</div><br>
 
 Адаптивная, семантическая pixel-perfect вёрстка одностраничного сайта по макету в Figma. Использовано БЭМ-именование классов. Реализованы все состояния интерактивных элементов: hover, focus, active.
 
